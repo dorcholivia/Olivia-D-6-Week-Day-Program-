@@ -26,7 +26,7 @@ level_names = ["Easy", "Medium", "Hard"]  # List to iterate over
 def get_yes_or_no(prompt):
     """Ask for yes or no repeatedly until valid input is given."""
     while True:
-        answer = input(prompt).lower()
+        answer = input(prompt).lower()3
         if answer in ["yes", "no"]:
             return answer
         print("Please enter 'yes' or 'no' only.")
