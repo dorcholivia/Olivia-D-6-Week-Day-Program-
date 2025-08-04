@@ -1,0 +1,16 @@
+h1 {
+  color: rgb(47, 4, 219);
+}
+
+p {
+  width: 60%;
+  background-color: #f0f8ff;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  padding: 20px;
+  margin: 0 0 0 20px;
+  font-size: 30px;
+  font-family: "Libertinus Sans", sans-serif;
+  transition: 0.3s ease;
+}
