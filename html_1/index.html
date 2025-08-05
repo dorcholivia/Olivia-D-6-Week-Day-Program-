@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   </head>
+
   <body>
     <div>
       <a href="index.html" target="_blank">Click me</a>
@@ -26,13 +27,26 @@
     </div>
 
     <main>
-      <!-- you can expand main later with more content -->
+      <!--  AI Interaction Section -->
+      <section id="ai-interaction" style="text-align: center; margin: 30px;">
+        <h2>Talk to Smart-Buddy</h2>
+
+        <label for="userInput">How are you feeling or what do you want to improve?</label><br />
+        <input
+          type="text"
+          id="userInput"
+          placeholder="e.g. I want to get better at track or I feel stressed"
+          style="width: 60%; padding: 10px; margin-top: 10px;"
+        /><br /><br />
+        <!-- This is the button you're replacing -->
+        <button onclick="handleUserInput()" style="padding: 10px 20px;">Submit</button>
+
+        <!-- Response goes here -->
+        <div id="aiResponse" style="margin-top: 20px; font-size: 18px; font-weight: bold;"></div>
+      </section>
     </main>
 
-    <footer style="text-align: center; padding: 20px; background-color: #f0f8ff;">
-      <p>Smart-Buddy — Your digital friend for growth & wellness</p>
-      <p>&copy; 2025 Smart-Buddy. All rights reserved.</p>
-      <p><strong>Author:</strong> Olivia Dorch</p>
-    </footer>
+    <!--  JavaScript Link -->
+    <script src="script.js" defer></script>
   </body>
 </html>
