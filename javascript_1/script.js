@@ -3,8 +3,25 @@ alert("Welcome to your A.I. friend");
 
 // User information
 let age = 16;
-const birthyear = 2009;
+if (age >= 16) {
+  console.log('You are able to use Smart-Buddy');
+}
 
+// Using the OR logical operator
+if (age < 16 || age > 30) {
+  console.log("You are under 16 or over 30");
+}
+
+// Using the NOT logical operator
+let isMinor = age < 16;
+
+if (!isMinor) {
+  console.log("You are not a minor");
+} else {
+  console.log("You are not able to use Smart-Buddy");
+}
+
+const birthyear = 2009;
 console.log("My age is", age);
 
 // Theme and messages
@@ -15,9 +32,9 @@ const THEME = {
 };
 
 let userName = "";
-let userMood = ""; 
-let focusArea = ""; 
-let journalEntries = []; 
+let userMood = "";
+let focusArea = "";
+let journalEntries = [];
 let lastCheckIn = null;
 
 let growthPlan = {
@@ -55,7 +72,7 @@ const userProfile = {
 };
 
 // Respond based on mood
-function respondToMood(mood){
+function respondToMood(mood) {
   if (["bad", "rough", "tired", "sad", "down"].some(word => mood.includes(word))) {
     return `I'm here for you. ${motivationalMessages[Math.floor(Math.random() * motivationalMessages.length)]}`;
   } else {
@@ -78,7 +95,7 @@ function generateGrowthPlan(goal) {
       "Monday: 1 hour reading + flashcards",
       "Wednesday: Practice tests and review",
       "Friday: Group study + summary notes"
-    ]; 
+    ];
   } else {
     plan = [
       "Set a SMART goal",
@@ -98,17 +115,23 @@ function generateGrowthPlan(goal) {
 function handleUserInput() {
   const input = document.getElementById("userInput").value.trim().toLowerCase();
   const responseDiv = document.getElementById("aiResponse");
-
   let reply = "";
 
-  if (!input) {
-    reply = "Please type something so I can help you.";
-  } else if (
-    input.includes("how can you help") ||
-    input.includes("what can you do") ||
-    input.includes("can you help")
+  // Case 1: What Smart-Buddy can do
+  if (
+    input.includes("how can you help me") ||
+    input.includes("what can you do for me") ||
+    input.includes("can you help") ||
+    input.includes("what can i do to help")
   ) {
-    reply = "I'm Smart-Buddy! I can help you with routines, motivation, emotional support, and tracking your goals.";
+    reply = `Hi ${userName || "there"}! I'm Smart-Buddy — your personal support system.
+I can help you:
+- Make personalized routines
+- Stay motivated
+- Manage school, fitness, and emotional well-being
+- Offer advice and support like a trusted buddy
+
+Want a custom routine? Visit the Home page to tell me what you want to improve and I’ll help you build one!`;
   } else if (
     input.includes("not feeling the best") ||
     input.includes("sad") ||
@@ -133,5 +156,9 @@ function handleUserInput() {
   }
 
   responseDiv.innerText = reply;
+
+  let myHeading = document.getElementById("myHeading");
+  myHeading.innerHTML = "I have put text on the page with JavaScript";
+
   document.getElementById("userInput").value = ""; // Clear input after response
 }
