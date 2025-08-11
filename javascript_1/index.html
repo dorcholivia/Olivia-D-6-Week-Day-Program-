@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     <title>Smart-Buddy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   </head>
+
   <body>
     <header>
-      <img src="smart-buddy-logo.png" alt="Smart-Buddy logo" class="logo" />
       <h1>Smart-Buddy</h1>
     </header>
 
@@ -16,16 +19,55 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="health.html">Health</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
-    <main>
+    <div id="Smart-Buddy">
+      <img src="smart-buddy-logo.png" alt="Smart-Buddy logo" />
       <p>Welcome to Smart-Buddy! Explore our site to learn more.</p>
+    </div>
+
+    <main>
+      <!-- AI Interaction Section -->
+      <section id="ai-interaction" style="text-align: center; margin: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <h2 style="color: rgb(47, 4, 219); margin-bottom: 20px;">Talk to Smart-Buddy</h2>
+
+        <label for="userInput" style="font-size: 16px; color: #333; display: block; margin-bottom: 10px;">
+          How are you feeling or what do you want to improve?
+        </label>
+        
+        <div style="margin-bottom: 20px;">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="e.g. I want to get better at track or I feel stressed"
+            style="width: 70%; padding: 12px; margin-top: 10px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; outline: none; transition: border-color 0.3s;"
+            onkeypress="if(event.key==='Enter') handleUserInput()"
+          />
+        </div>
+
+        <button 
+          onclick="handleUserInput()" 
+          style="padding: 12px 24px; background-color: rgb(47, 4, 219); color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;"
+          onmouseover="this.style.backgroundColor='rgb(37, 3, 179)'"
+          onmouseout="this.style.backgroundColor='rgb(47, 4, 219)'"
+        >
+          Send Message
+        </button>
+
+        <div 
+          id="aiResponse" 
+          style="margin-top: 25px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; font-size: 16px; line-height: 1.5; min-height: 50px; text-align: left; border-left: 4px solid rgb(47, 4, 219); display: none;"
+        ></div>
+      </section>
     </main>
 
-    <footer style="text-align: center; padding: 20px; background-color: #f0f8ff;">
-      <p>Smart-Buddy — Your digital friend for growth & wellness</p>
+    <!-- JavaScript Link -->
+    <script src="script.js" defer></script>
+    
+    <footer>
       <p>&copy; 2025 Smart-Buddy. All rights reserved.</p>
       <p><strong>Author:</strong> Olivia Dorch</p>
     </footer>

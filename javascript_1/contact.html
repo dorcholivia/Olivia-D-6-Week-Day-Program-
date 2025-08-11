@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     <title>Contact Smart-Buddy</title>
   </head>
   <body>
@@ -15,6 +15,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="health.html">Health</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -23,8 +24,7 @@
       <section>
         <h2>Send Us a Message</h2>
         <p>We're always here for you — reach out anytime.</p>
-
-        <form>
+        <form id="contactForm">
           <label for="name">What's your name?</label><br />
           <input type="text" id="name" name="name" required /><br /><br />
 
@@ -36,6 +36,9 @@
 
           <input type="submit" value="Send Message" />
         </form>
+
+        <!-- Smart-Buddy AI Response -->
+        <div id="contactResponse" style="margin-top: 20px; font-weight: bold;"></div>
       </section>
     </main>
 
@@ -43,5 +46,58 @@
       <p>&copy; 2025 Smart-Buddy. All rights reserved.</p>
       <p><strong>Author:</strong> Olivia Dorch</p>
     </footer>
+
+    <!-- JS for Smart-Buddy Response -->
+    <script>
+      const form = document.getElementById('contactForm');
+      const responseDiv = document.getElementById('contactResponse');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent form from refreshing page
+
+        const name = document.getElementById('name').value.trim();
+        const day = document.getElementById('day').value.trim().toLowerCase();
+        const help = document.getElementById('help').value.trim().toLowerCase();
+
+        let reply = "";
+
+        // Case 1: User asks for help
+        if (
+          help.includes("how can you help me") ||
+          help.includes("what can you do for me") ||
+          help.includes("can you help")
+        ) {
+          reply = `Hi ${name}! I'm Smart-Buddy — your personal support friend. I can help you with:
+- Making routines
+- Staying motivated
+- Giving advice for school, fitness, goals, and more
+- Helping you reflect and feel supported
+
+Let me know what you're struggling with, and I’ll be here.`;
+        }
+        // Case 2: They're not having a good day
+        else if (
+          day.includes("not the best") ||
+          day.includes("bad") ||
+          day.includes("sad") ||
+          day.includes("not good") ||
+          day.includes("rough") ||
+          day.includes("hard") ||
+          day.includes("awful")
+        ) {
+          reply = `Hi ${name}, that is totally understandable and I’m sorry to hear that.
+If there's anything you're struggling with, reach out to a friend—they're more helpful than you think.
+But if you don't want to do that, talk to me—I will always listen.`;
+        }
+        // Default response
+        else {
+          reply = `Hi ${name}! Thanks for reaching out. I'm really glad to hear about your day: "${day}".
+I'll do my best to help you with: "${help}". You've got this!`;
+        }
+
+        responseDiv.innerText = reply;
+        form.reset();
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Health - Smart-Buddy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1>Smart-Buddy Health</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="health.html">Health</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="Smart-Buddy">
+      <img src="smart-buddy-logo.png" alt="Smart-Buddy logo" />
+      <p>Your trusted companion for health information and guidance.</p>
+    </div>
+
+    <main>
+      <!-- Health Information Section -->
+      <section id="health-info" style="margin: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <h2 style="color: rgb(47, 4, 219); margin-bottom: 20px;">Health Resources</h2>
+        
+        <div style="margin-bottom: 30px;">
+          <h3 style="color: #333;">Physical Health</h3>
+          <p>Understanding your body's functionality is key to maintaining good health. Regular exercise, balanced nutrition, and adequate sleep form the foundation of physical wellbeing.</p>
+          
+          <div class="health-faq" style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid rgb(47, 4, 219);">
+            <h4>Common Questions About Physical Health:</h4>
+            <ul style="list-style-type: none; padding-left: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Q: How much exercise do I need daily?</strong><br>
+              A: Most health authorities recommend at least 30 minutes of moderate activity 5 days a week, or 150 minutes total weekly.</li>
+              
+              <li style="margin-bottom: 10px;"><strong>Q: What are signs I should see a doctor?</strong><br>
+              A: Persistent pain, sudden weight changes, unusual fatigue, changes in sleep patterns, or any symptoms that significantly impact your daily life warrant medical attention.</li>
+              
+              <li style="margin-bottom: 10px;"><strong>Q: How can I improve my cardiovascular health?</strong><br>
+              A: Regular aerobic exercise, maintaining healthy blood pressure and cholesterol levels, not smoking, and eating a heart-healthy diet rich in fruits, vegetables, and whole grains.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 30px;">
+          <h3 style="color: #333;">Mental Health</h3>
+          <p>Mental health is equally important as physical health. Taking care of your mind involves managing stress, practicing mindfulness, and seeking support when needed.</p>
+          
+          <div class="health-faq" style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid rgb(47, 4, 219);">
+            <h4>Common Questions About Mental Health:</h4>
+            <ul style="list-style-type: none; padding-left: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Q: How can I manage daily stress?</strong><br>
+              A: Practice deep breathing exercises, maintain a regular sleep schedule, engage in physical activity, limit screen time, and consider mindfulness meditation.</li>
+              
+              <li style="margin-bottom: 10px;"><strong>Q: What are signs of anxiety I should watch for?</strong><br>
+              A: Excessive worry, restlessness, fatigue, difficulty concentrating, irritability, muscle tension, and sleep problems are common signs of anxiety.</li>
+              
+              <li style="margin-bottom: 10px;"><strong>Q: When should I seek professional help for mental health?</strong><br>
+              A: If feelings of sadness, anxiety, or other mental health concerns persist for weeks and interfere with daily activities, relationships, or work, it's time to consult a professional.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 30px;">
+          <h3 style="color: #333;">Health Risk Assessment</h3>
+          <p>Understanding potential health risks can help you make informed decisions about your lifestyle and preventive care.</p>
+          
+          <div class="health-faq" style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid rgb(47, 4, 219);">
+            <h4>Common Questions About Health Risks:</h4>
+            <ul style="list-style-type: none; padding-left: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Q: What lifestyle factors increase health risks?</strong><br>
+              A: Smoking, excessive alcohol consumption, poor diet, physical inactivity, high stress levels, and inadequate sleep all contribute to increased health risks.</li>
+              
+              <li style="margin-bottom: 10px;"><strong>Q: How does family history affect my health risks?</strong><br>
+              A: Family history can indicate genetic predispositions to certain conditions like heart disease, diabetes, and some cancers. Sharing this information with your healthcare provider helps create appropriate screening schedules.</li>
+              
+              <li style="margin-bottom: 10px;"><strong>Q: What preventive screenings should I consider?</strong><br>
+              A: Recommended screenings vary by age, gender, and risk factors. Common ones include blood pressure, cholesterol, diabetes, various cancers, and mental health assessments.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- AI Health Assistant Section -->
+      <section id="health-ai-interaction" style="text-align: center; margin: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <h2 style="color: rgb(47, 4, 219); margin-bottom: 20px;">Ask Smart-Buddy About Health</h2>
+
+        <label for="healthInput" style="font-size: 16px; color: #333; display: block; margin-bottom: 10px;">
+          What health questions do you have today?
+        </label>
+        
+        <div style="margin-bottom: 20px;">
+          <input
+            type="text"
+            id="healthInput"
+            placeholder="e.g. How can I improve my sleep? or What are good stress management techniques?"
+            style="width: 70%; padding: 12px; margin-top: 10px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; outline: none; transition: border-color 0.3s;"
+            onkeypress="if(event.key==='Enter') handleHealthInput()"
+          />
+        </div>
+
+        <button 
+          onclick="handleHealthInput()" 
+          style="padding: 12px 24px; background-color: rgb(47, 4, 219); color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;"
+          onmouseover="this.style.backgroundColor='rgb(37, 3, 179)'"
+          onmouseout="this.style.backgroundColor='rgb(47, 4, 219)'"
+        >
+          Get Health Advice
+        </button>
+
+        <div 
+          id="healthResponse" 
+          style="margin-top: 25px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; font-size: 16px; line-height: 1.5; min-height: 50px; text-align: left; border-left: 4px solid rgb(47, 4, 219); display: none;"
+        ></div>
+      </section>
+
+      <!-- Health Resources Section -->
+      <section id="resources" style="margin: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <h2 style="color: rgb(47, 4, 219); margin-bottom: 20px;">Additional Resources</h2>
+        
+        <p>Remember that Smart-Buddy provides general health information and is not a substitute for professional medical advice. Always consult with qualified healthcare providers for personalized guidance.</p>
+        
+        <div style="margin-top: 20px;">
+          <h4>Helpful Health Links:</h4>
+          <ul>
+            <li><a href="https://www.cdc.gov/" target="_blank" style="color: rgb(47, 4, 219);">Centers for Disease Control and Prevention</a></li>
+            <li><a href="https://www.nimh.nih.gov/" target="_blank" style="color: rgb(47, 4, 219);">National Institute of Mental Health</a></li>
+            <li><a href="https://www.heart.org/" target="_blank" style="color: rgb(47, 4, 219);">American Heart Association</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; background-color: #f0f8ff;">
+      <p>&copy; 2025 Smart-Buddy. All rights reserved.</p>
+      <p><strong>Author:</strong> Olivia Dorch</p>
+    </footer>
+
+    <!-- JavaScript Link -->
+    <script src="script.js" defer></script>
+    <script>
+      // Health-specific JavaScript functionality
+      function handleHealthInput() {
+        const input = document.getElementById("healthInput").value.trim();
+        const responseDiv = document.getElementById("healthResponse");
+        
+        if (!input) {
+          responseDiv.innerText = "Please enter a health-related question!";
+          responseDiv.style.display = "block";
+          responseDiv.style.color = "#666";
+          return;
+        }
+        
+        // Show loading message
+        responseDiv.innerText = "Smart-Buddy is thinking about your health question... 🤔";
+        responseDiv.style.display = "block";
+        responseDiv.style.color = "#666";
+        
+        try {
+          // Use the same API endpoint as the main chat functionality
+          fetch('/api/chat', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+              message: "HEALTH QUESTION: " + input 
+            })
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.response) {
+              responseDiv.innerText = data.response;
+              responseDiv.style.color = "#333";
+            } else {
+              responseDiv.innerText = data.error || "Sorry, I'm having trouble answering your health question right now. Please try again!";
+              responseDiv.style.color = "#d32f2f";
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            responseDiv.innerText = "Sorry, I'm having trouble connecting right now. Please try again in a moment!";
+            responseDiv.style.color = "#d32f2f";
+          });
+          
+        } catch (error) {
+          console.error('Error:', error);
+          responseDiv.innerText = "Sorry, I'm having trouble with your health question. Please try again in a moment!";
+          responseDiv.style.color = "#d32f2f";
+        }
+        
+        // Clear the input field
+        document.getElementById("healthInput").value = "";
+      }
+
+      // Add Enter key support for better UX
+      document.addEventListener('DOMContentLoaded', function() {
+        const healthInput = document.getElementById("healthInput");
+        if (healthInput) {
+          healthInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+              handleHealthInput();
+            }
+          });
+        }
+      });
+    </script>
+    
+    <footer>
+      <p>&copy; 2025 Smart-Buddy. All rights reserved.</p>
+      <p><strong>Author:</strong> Olivia Dorch</p>
+    </footer>
+  </body>
+</html>
