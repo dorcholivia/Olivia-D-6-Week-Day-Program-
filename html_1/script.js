@@ -2,8 +2,10 @@ console.log("Successfully connected with javascript")
 alert("Welcome to your A.I. friend")
 
 let age = 16;
+let oneYearAge = 1;
+let nextYearsAge = age + oneYearAge;
 const birthyear = 2009;
-console.log("My age is ", age)
+console.log("My age is ", age, "and next year I will be", nextYearsAge)
 
 const THEME = {
     background: "#f0f8ff",
